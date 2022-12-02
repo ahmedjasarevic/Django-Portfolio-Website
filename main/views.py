@@ -6,10 +6,14 @@ from .forms import NewUserForm
 
 
 
-def homepage(request):
-    return render(request=request,
-                  template_name="main/categories.html",
-                  context={"categories":TutorialCategory.objects.all})
+
 
 def contact(request):
     return render(request,"main/contact.html")
+
+def homepage(request):
+    return render(request,"main/home.html")
+
+
+def projects(request):
+    return render(request,"main/projects.html")
