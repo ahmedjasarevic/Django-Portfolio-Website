@@ -34,3 +34,18 @@ font-size: 40px;
     left:50%;
     transform: translateX(-50%) translateY(-50%);
 }
+
+.mb-3{
+color:white;
+}
+
+.titleProject{
+color:black;
+}
+.card-text{
+color:black;
+}
+
+.contactText{
+color:white;
+}
