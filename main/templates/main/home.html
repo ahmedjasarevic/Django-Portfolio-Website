@@ -5,10 +5,13 @@
         <div class="jumbotron ">
             <div class="container">
               <br><br><br>
-              <p> Welcome <p>
+               nesto
               <br><br><br><br>
             </div>
         </div>
 </div>
 
+{% for tut in tutorials %}
+                     <p>{{tut.tutorial_title}}</p>
+                {% endfor %}
 {% endblock %}

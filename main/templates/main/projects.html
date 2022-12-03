@@ -36,22 +36,24 @@
 
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                        <img class="img-fluid" alt="100%x280" src="https://img.freepik.com/free-photo/white-bicycle-standing-park_1153-7319.jpg?w=2000">
                                         <div class="card-body">
-                                            <h4 class="card-title">Project</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            {% for tut in tutorials %}
+                                                 <p>{{tut.tutorial_title}}</p>
+                                                <p class="card-text">{{tut.tutorial_content |safe}}</p>
+                                            {% endfor %}
                                         </div>
 
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <img class="img-fluid" alt="100%x280" src="https://miro.medium.com/max/1200/1*gYYWXxLr7k4_RlIwkM1Bnw.png">
                                         <div class="card-body">
-                                            <h4 class="card-title">Project</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                              {% for tut in tutorials %}
+                                                 <p>{{tut.tutorial_title}}</p>
+                                                <p class="card-text">{{tut.tutorial_content |safe}}</p>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>

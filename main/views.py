@@ -11,9 +11,18 @@ from .forms import NewUserForm
 def contact(request):
     return render(request,"main/contact.html")
 
+
+def contact(request):
+    return render(request,"main/about.html")
+
 def homepage(request):
-    return render(request,"main/home.html")
+    return render(request = request,
+                  template_name='main/home.html',
+                  context = {"tutorials":Tutorial.objects.all})
+
 
 
 def projects(request):
-    return render(request,"main/projects.html")
+    return render(request = request,
+                  template_name='main/projects.html',
+                  context = {"tutorials":Tutorial.objects.all})
