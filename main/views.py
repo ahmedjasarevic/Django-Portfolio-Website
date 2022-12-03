@@ -12,7 +12,7 @@ def contact(request):
     return render(request,"main/contact.html")
 
 
-def contact(request):
+def about(request):
     return render(request,"main/about.html")
 
 def homepage(request):
@@ -26,3 +26,4 @@ def projects(request):
     return render(request = request,
                   template_name='main/projects.html',
                   context = {"tutorials":Tutorial.objects.all})
+
