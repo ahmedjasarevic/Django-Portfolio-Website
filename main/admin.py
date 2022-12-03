@@ -11,7 +11,8 @@ class TutorialAdmin(admin.ModelAdmin):
         ("Title/date", {'fields': ["tutorial_title", "tutorial_published"]}),
         ("URL", {'fields': ["tutorial_slug"]}),
         ("Series", {'fields': ["tutorial_series"]}),
-        ("Content", {"fields": ["tutorial_content"]})
+        ("Content", {"fields": ["tutorial_content"]}),
+        ("Image", {"fields": ["tutorial_image"]}),
     ]
 
     formfield_overrides = {
