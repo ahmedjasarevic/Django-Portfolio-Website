@@ -3,12 +3,12 @@
 {% block content %}
 {% load static %}
 <link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/style.css'%}">
-<body id='bg2' style="background-image: url('{%static 'background.jpg'%}');"></body>
+<body style="background-color:powderblue;">
      <div class="col s12, m8, l8">
-            <h1 style="color:white;">{{post.tutorial_title}}</h1>
+            <h1 style="color:black;">{{post.tutorial_title}}</h1>
             <p style="font-size:70%;color:gray;">Published {{post.tutorial_published}}</p>
             {{post.tutorial_content|safe}}
         </div>
-
+</body>
 
 {% endblock %}
