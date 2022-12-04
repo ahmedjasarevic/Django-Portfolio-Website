@@ -2,89 +2,44 @@
 
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/style.css'%}">
-<body id='bg' style="background-image: url('{%static 'background.jpg'%}');"></body>
-   <head>
-                                <meta charset='utf-8'>
-                                <meta name='viewport' content='width=device-width, initial-scale=1'>
-                                <title>Snippet - GoSNippets</title>
-                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
-                                <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
-                                <style></style>
-                                <script type='text/javascript' src=''></script>
-                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
-                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
-                            </head>
-                            <body oncontextmenu='return false' class='snippet-body'>
-<section class="pt-5 pb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <h3 class="mb-3">Projects </h3>
-            </div>
-            <div class="col-6 text-right">
-                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                    <i class="fa fa-arrow-left"></i>
-                </a>
-                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                    <i class="fa fa-arrow-right"></i>
-                </a>
-            </div>
-            <div class="col-12">
-                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
 
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                {% for tut in tutorials %}
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" width="400" height="266" src="{{tut.tutorial_image.url}}">
-                                        <div class="card-body">
-                                                 <h4 class="titleProject">{{tut.tutorial_title}}</h4>
-                                                <h2 class="card-text">{{tut.tutorial_content |safe}}</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                {% for tut in tutorials %}
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                    <img class="img-fluid" width="400" height="266" src="{{tut.tutorial_image.url}}">
-                                        <div class="card-body">
-                                             <h4 class="titleProject">{{tut.tutorial_title}}</h4>
-                                             <h2 class="card-text">{{tut.tutorial_content |safe}}</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-                                 {% for tut in tutorials %}
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                    <img class="img-fluid" width="400" height="266" src="{{tut.tutorial_image.url}}">
-                                        <div class="card-body">
-                                            <h4 class="titleProject">{{tut.tutorial_title}}</h4>
-                                             <h2 class="card-text">{{tut.tutorial_content |safe}}</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                  {% endfor %}
-                            </div>
-                        </div>
-                    </div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {% for obj in tutorials %}
+                {% if forloop.first %}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}" class="active"></li>
+                {% else %}
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{forloop.counter0}}"></li>
+
+                {% endif %}
+            {% endfor %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            {% for obj in tutorials %}
+                {% if forloop.first %}
+                    <div class="carousel-item active  ">
+                {% else %}
+                    <div class="carousel-item  ">
+                {% endif %}
+                <img class="d-block w-100 h-50" class="h-50 d-inline-block" src="{{ obj.tutorial_image.url}}" alt="{{obj.tutorial_title}}">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h4 class="titleProject">{{obj.tutorial_title}}</h4>
+                      <a href="{{ obj.tutorial_slug }}" class="btn btn-primary">Read More &rarr;</a>
+                      </div>
                 </div>
-            </div>
+            {% endfor %}
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
         </div>
     </div>
-</section>
-
 
 {% endblock %}
