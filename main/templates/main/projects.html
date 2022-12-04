@@ -2,7 +2,8 @@
 
 {% block content %}
 {% load static %}
-
+<link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/style.css'%}">
+<body id='bg' style="background-image: url('{%static 'background.jpg'%}');"></body>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             {% for obj in tutorials %}
@@ -24,7 +25,7 @@
                 {% endif %}
                 <img class="d-block w-100 h-50" class="h-50 d-inline-block" src="{{ obj.tutorial_image.url}}" alt="{{obj.tutorial_title}}">
                       <div class="carousel-caption d-none d-md-block">
-                        <h4 class="titleProject">{{obj.tutorial_title}}</h4>
+                        <h4 class="titleProject" style="color:white;">{{obj.tutorial_title}}</h4>
                       <a href="{{ obj.tutorial_slug }}" class="btn btn-primary">Read More &rarr;</a>
                       </div>
                 </div>
@@ -41,5 +42,4 @@
         </a>
         </div>
     </div>
-
 {% endblock %}

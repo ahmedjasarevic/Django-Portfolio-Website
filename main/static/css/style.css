@@ -6,6 +6,7 @@
   overflow: hidden;
 }
 
+
 .textCenter{
     font-family: 'Gabriela', serif;
 font-family: 'Roboto', sans-serif;
@@ -40,7 +41,7 @@ color:white;
 }
 
 .titleProject{
-color:black;
+color:white;
 }
 .card-text{
 color:black;
