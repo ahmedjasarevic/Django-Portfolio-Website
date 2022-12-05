@@ -18,7 +18,8 @@ def contact(request):
 
 
 def about(request):
-    return render(request,"main/about.html")
+    return render(request,"main/about.html",
+                  context={"tutorials": Tutorial.objects.all})
 
 
 

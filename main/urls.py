@@ -24,4 +24,5 @@ urlpatterns = [
     path("about/", views.about, name="about"),
     path("<slug:slug>", views.detail, name='single_slug'),
     path("projects/<slug:slug>/", views.detail, name='single_slug'),
+    path("about/<slug:slug>/", views.detail, name='single_slug'),
 ]
