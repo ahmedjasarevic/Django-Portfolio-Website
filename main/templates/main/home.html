@@ -1,16 +1,36 @@
 {% extends "main/header.html" %}
 
 {% block content %}
-{% load static %}
+    {% load static %}
+<html style='overflow: hidden !important;'>
 <head>
-    <link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/style.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
-<body id='bg' style="background-image: url('{%static 'background.jpg'%}');">
-<h1 class="textCenter">I am Ahmed Jasarevic</h1>
-<h2 class="textCenter2">Web Developer|</h2>
+
+
+
+
+ <header id="header">
+    <div class="container">
+      <h1>Ahmed Jasarevic</h1>
+      <h2>I'm a passionate <span> developer </span> from Bosnia and Herzegovina</h2>
+      <div class="social-links">
+         <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+
 </body>
+</html>
 
 
 {% endblock %}
