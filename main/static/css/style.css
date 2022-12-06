@@ -507,3 +507,48 @@ h6 {
     border-radius: 50px;
     transition: all 0.3s;
 }
+
+ .aboutSection{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    text-align: center;
+    color:#fff;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+}
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.testimonial{
+padding:30px 100px;
+}
+
+article h1{
+    font-size: 50px;
+    font-weight: 800;
+    color: #C0C0C0;
+    text-transform: uppercase;
+}
+
+article img{
+    height:400px;
+    width:400px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-top: 60px;
+}
+
+blockquote{
+    font-family: sans-serif;
+     background-color:  #000080;
+    font-size: 27px;
+    margin-top: 30px;
+}
+
+.fa-map-marker, .fa-share-square-o, .fa-envelope-o, .fa-phone{
+color: black;
+}
