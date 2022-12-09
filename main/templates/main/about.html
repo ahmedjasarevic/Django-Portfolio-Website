@@ -2,24 +2,61 @@
 
 {% block content %}
 {% load static %}
-<head>
-    <link rel="stylesheet" type="text/css" href="{%static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-     <link rel="stylesheet" href="style.css">
+
+
+<!DOCTYPE html>
+<html style='overflow: hidden !important;'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Me Profile card || Learning Robo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   </head>
+  <body>
 
+    <div class = "about-wrapper">
+      <div class = "about-left">
+        <div class = "about-left-content">
+          <div>
+            <div class = "shadow">
+              <div class = "about-img">
+                <img src = "/static/about.png/" alt = "about image">
+              </div>
+            </div>
 
-<body>
-<div id="about-me">
-  <h1>About Me</h1>
-  <p>Hi, I'm Jane Doe and I am a web developer. I have a passion for creating beautiful and user-friendly websites. I have a degree in computer science and have been working in the industry for the past 5 years. In my current role, I work as a full-stack developer, using languages such as HTML, CSS, JavaScript, and PHP. I am always looking for ways to improve my skills and stay up-to-date with the latest technologies and trends in the field. When I'm not coding, I enjoy hiking and traveling.</p>
-</div>
+            <h2>Ahmed Jasarevic</h2>
+            <h3>Web developer</h3>
+          </div>
 
-</body>
+          <ul class = "icons">
+            <li><i class = "fab fa-facebook-f"></i></li>
+            <li><i class = "fab fa-twitter"></i></li>
+            <li><i class = "fab fa-linkedin"></i></li>
+            <li><i class = "fab fa-instagram"></i></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class = "about-right">
+        <h1>Hello<span>!</span></h1>
+        <h2>Here's who I am & what I do</h2>
+        <div class = "about-btns">
+          <button type = "button" class = "btn btn-pink">resume / CV</button>
+          <button type = "button" class = "btn btn-pink">Git hub</button>
+        </div>
+
+        <div class = "about-para">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, aspernatur possimus ullam quaerat, laboriosam ex voluptate aliquid laborum, obcaecati ratione accusamus! Ea nisi modi dolor nam numquam? Temporibus, molestias amet.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iure tempora alias laudantium sapiente impedit!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
 
 
 {% endblock %}
