@@ -560,7 +560,7 @@ body{
     margin: 9rem 0 0.6rem 0;
     line-height: 1.2;
     padding-bottom: 2rem;
-    border-bottom: 2px solid #B721FF;
+    border-bottom: 2px solid #18d26e;
 }
 .about-left-content h3{
     text-transform: uppercase;
@@ -577,7 +577,7 @@ body{
 }
 .icons li{
     list-style-type: none;
-    background: #B721FF;
+    background: #3EADCF;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -610,7 +610,7 @@ body{
     text-transform: uppercase;
 }
 .about-right h1 span{
-    color: #B721FF;
+    color: #18d26e;
 }
 .about-right h2{
     font-weight: 600;
