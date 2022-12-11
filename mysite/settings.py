@@ -19,7 +19,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
-PORT = os.environ.get('PORT')
+PORT = os.environ.get('PORT', 8080)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
