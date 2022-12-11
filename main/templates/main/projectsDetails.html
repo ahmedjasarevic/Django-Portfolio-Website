@@ -1,14 +1,54 @@
 {% extends 'main/header.html' %}
 
+
+
 {% block content %}
-{% load static %}
-<link rel="stylesheet" type="text/css" media="screen" href="{%static 'css/style.css'%}">
-<body style="background-color:black;">
-     <div class="col s12, m8, l8">
+ <div class="col s12, m8, l8">
             <h1 style="color:white;">{{post.tutorial_title}}</h1>
             <p style="font-size:70%;color:gray;">Published {{post.tutorial_published}}</p>
-            {{post.tutorial_content|safe}}
         </div>
-</body>
+
+  <style>
+    .carousel-caption {
+    position: relative;
+    left: 0;
+    top: 2;
+}
+  </style>
+<!--Carousel Wrapper-->
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+    {% for p in photos %}
+      <li data-target="#carousel-example-1z" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter0 == 0 %} active {% endif %}"></li>
+    {% endfor %}
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      {% for p in photos %}
+      <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+        <img class="d-block w-100" src="{{p.image.url}}">
+           <div class="carousel-caption d-none d-md-block">
+    <h5> {{p.title}}</h5>
+  </div>
+      </div>
+      {% endfor %}
+      <!--/First slide-->
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+</div>
+
+            {{post.tutorial_content|safe}}
 
 {% endblock %}

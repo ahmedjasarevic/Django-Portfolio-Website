@@ -33,7 +33,6 @@ class Tutorial(models.Model):
     tutorial_title = models.CharField(max_length=200)
     tutorial_content = models.TextField()
     tutorial_published = models.DateTimeField('date published')
-    #https://docs.djangoproject.com/en/2.1/ref/models/fields/#django.db.models.ForeignKey.on_delete
     tutorial_series = models.ForeignKey(TutorialSeries, null=True, default=None, verbose_name="Series",
                                           on_delete=models.CASCADE)
     tutorial_slug = models.CharField(max_length=200, default=1)
@@ -42,6 +41,12 @@ class Tutorial(models.Model):
         return self.tutorial_title
 
 
+class TutorialImage(models.Model):
+    post = models.ForeignKey(Tutorial, default=None, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='main/img', blank=True)
+    title = models.CharField(max_length=200)
+    def __str__(self):
+        return self.post.tutorial_title
 
 
 class Account(models.Model):

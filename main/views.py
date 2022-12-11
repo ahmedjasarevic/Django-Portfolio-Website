@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from .models import Tutorial, TutorialCategory, TutorialSeries
+from .models import Tutorial, TutorialCategory, TutorialSeries, TutorialImage
 from django.contrib import messages
 from .forms import NewUserForm
 
@@ -31,4 +31,6 @@ def projects(request):
 
 def detail(request, slug):
     post = Tutorial.objects.get(tutorial_slug=slug)
-    return render(request, 'main/projectsDetails.html', {'post': post})
+    photos = TutorialImage.objects.filter(post=post)
+    return render(request, 'main/projectsDetails.html', {'post': post, 'photos': photos})
+
