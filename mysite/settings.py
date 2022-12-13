@@ -17,7 +17,7 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-PORT = os.environ.get('PORT', 8080)
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-+=5y5^sz%(4)8izvx&#evlh*xkhdhpw(t1z^s34hcj4wc-z)#j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = []
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
@@ -111,10 +111,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
 DATABASES = {
-    # 'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
+     'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
 }
 
 
