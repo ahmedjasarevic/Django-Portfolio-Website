@@ -3,7 +3,7 @@
 {% block content %}
 {% load static %}
 <head>
-<link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+<link href="{% static '/tinymce/css/prism.css' %}" rel="stylesheet">
 </head>
 
  <div class="col s12, m8, l8">
@@ -54,5 +54,10 @@
 
             {{post.tutorial_content|safe}}
 
-<script src="{% static  'tinymce/js/prism.js' %}"></script>
+
+<div class = "about-btns">
+<button type = "button" onclick="location.href='{{post.tutorial_link}}'" class = "btn btn-pink">Github</button>
+</div>
+
+<script src="{% static  '/tinymce/js/prism.js' %}"></script>
 {% endblock %}

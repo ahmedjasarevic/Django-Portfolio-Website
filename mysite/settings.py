@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import dj_database_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-+=5y5^sz%(4)8izvx&#evlh*xkhdhpw(t1z^s34hcj4wc-z)#j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['jasarevicahmed.pythonanywhere.com']
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
+         'NAME': '/home/Jasarevicahmed/Django-Portfolio-Website/db.sqlite3',
      }
 }
 
@@ -150,13 +150,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
-
-
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

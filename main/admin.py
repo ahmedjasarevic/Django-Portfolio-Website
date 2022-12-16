@@ -14,7 +14,7 @@ class TutorialImageAdmin(admin.StackedInline):
 @admin.register(Tutorial)
 class TutorialAdmin(admin.ModelAdmin):
     fieldsets = [
-        ("Title/date", {'fields': ["tutorial_title", "tutorial_published"]}),
+        ("Title/date", {'fields': ["tutorial_title", "tutorial_published", "tutorial_link"]}),
         ("URL", {'fields': ["tutorial_slug"]}),
         ("Series", {'fields': ["tutorial_series"]}),
         ("Content", {"fields": ["tutorial_content"]}),

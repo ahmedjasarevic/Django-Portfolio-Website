@@ -32,6 +32,7 @@ class TutorialSeries(models.Model):
 
 class Tutorial(models.Model):
     tutorial_title = models.CharField(max_length=200)
+    tutorial_link = models.CharField(max_length=200)
     tutorial_content = models.TextField()
     tutorial_published = models.DateTimeField('date published')
     tutorial_series = models.ForeignKey(TutorialSeries, null=True, default=None, verbose_name="Series",
