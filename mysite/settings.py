@@ -33,7 +33,7 @@ SECRET_KEY = 'django-insecure-+=5y5^sz%(4)8izvx&#evlh*xkhdhpw(t1z^s34hcj4wc-z)#j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jasarevicahmed.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
@@ -113,7 +113,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': '/home/Jasarevicahmed/Django-Portfolio-Website/db.sqlite3',
+         'NAME': 'db.sqlite3',
      }
 }
 
